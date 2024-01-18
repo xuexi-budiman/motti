@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  push_to_container_registry:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up QEMU env
+        uses: docker/setup-qemu-action@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to container registry
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ secrets.container_registry }}
+          username: ${{ secrets.container_registry_username }}
+          password: ${{ secrets.container_registry_password }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: ${{ secrets.container_registry }}/${{ secrets.container_registry_username }}/${{ github.event.repository.name }}:${{ github.run_number }}, ${{ secrets.container_registry }}/${{ secrets.container_registry_username }}/${{ github.event.repository.name }}:latest
+          platforms: linux/amd64,linux/arm64
