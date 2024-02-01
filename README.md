@@ -58,3 +58,8 @@ paid boolean
 ## Client -> update menu
 
 ## Authentication -> clients login/create stuff etc
+
+<!-- 31/1/2024 -->
+
+- Menu layout
+- owner CRUD menu items

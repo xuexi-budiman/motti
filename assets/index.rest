@@ -1,0 +1,6 @@
+### GET ALL BURGERS
+GET http://localhost:3005/burgers
+
+### GET Burger by ID
+GET http://localhost:3005/burgers/shake-shack-shackburger-8-pack
+
