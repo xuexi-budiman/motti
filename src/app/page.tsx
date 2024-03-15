@@ -39,9 +39,6 @@ const features = [
 
 export default function Home() {
   return (
-<<<<<<< Updated upstream
-    <p> </p>
-=======
     <div className="container mx-auto bg-gradient-to-b from-gray-900 to-gray-1000">
       <div className="mx-auto font-gl py-24 sm:py-32 bg-transparent">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -77,6 +74,5 @@ export default function Home() {
         </div>
       </div>
     </div>
->>>>>>> Stashed changes
   );
 }

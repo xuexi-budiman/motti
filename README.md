@@ -63,3 +63,12 @@ paid boolean
 
 - Menu layout
 - owner CRUD menu items
+
+### Good to know
+1. `npx prisma generate` after pushing/editing prisma schema
+
+## How to run app
+1. npm i
+2. Run postgres db with `docker run --name postgresdb -e POSTGRES_PASSWORD=xuexi -e POSTGRES_USER=xuexi -d -p 5432:5432 postgres`
+3. Populate env vars with db creds
+4. Add fields to databse with `npx prisma db push`
