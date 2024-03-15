@@ -57,3 +57,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .ziButton {
+    @apply w-full text-left px-8 py-5 hover:border-solid hover:border-2 hover:rounded-xl;
+  }
+}
