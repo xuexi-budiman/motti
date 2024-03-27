@@ -52,6 +52,9 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        backgroundImage: {
+          'mad-at-restaurant': "url(/img/mad_at_restaurant.jpg)"
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
